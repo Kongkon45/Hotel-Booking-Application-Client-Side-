@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "name": "Luxury Hotel",
+    "location": "City Center",
+    "description": "Indulge in unparalleled luxury at our exquisite hotel located in the heart of the bustling city center. Offering a fusion of modern elegance and timeless charm, our rooms are designed to provide the utmost comfort and relaxation. Pamper yourself with our world-class amenities, including a state-of-the-art spa, rooftop swimming pool, and gourmet dining options. Whether you're traveling for business or leisure, our attentive staff is dedicated to ensuring a memorable stay. Experience the epitome of sophistication and refinement at our luxury hotel.",
+    "price_range": "300",
+    "amenities": ["Free Wi-Fi", "Swimming Pool", "Spa", "Gym"],
+    "rating": 4.5,
+    "reviews": 120,
+    "image": "https://i.ibb.co/52pyhfB/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Seaside Resort",
+    "location": "Beachfront",
+    "description": "Escape to paradise at our enchanting seaside resort nestled along the pristine coastline. Immerse yourself in the breathtaking beauty of the ocean with panoramic views from every room. Relax and unwind on the golden sands, indulge in exhilarating water sports, or savor delectable seafood delights at our oceanfront restaurant. Our resort offers a tranquil oasis where you can rejuvenate your mind, body, and soul. Whether you're seeking a romantic getaway or a family vacation, our resort promises an unforgettable experience in a tropical paradise.",
+    "price_range": "200",
+    "amenities": ["Beach Access", "Poolside Bar", "Water Sports", "Restaurant"],
+    "rating": 4.2,
+    "reviews": 95,
+    "image": "https://i.ibb.co/c3vTCCk/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Cozy Inn",
+    "location": "Suburbs",
+    "description": "Discover a charming retreat at our cozy inn nestled in the peaceful suburbs. Experience the warmth and hospitality of a home away from home in our comfortable and inviting accommodations. Wake up to a complimentary breakfast spread and enjoy leisurely strolls in our picturesque garden. Whether you're traveling solo, with family, or furry friends, our pet-friendly inn welcomes guests of all kinds. With convenient amenities and personalized service, we strive to make your stay a relaxing and memorable one.",
+    "price_range": "500",
+    "amenities": ["Free Breakfast", "Parking", "Pet-Friendly", "Garden"],
+    "rating": 4.0,
+    "reviews": 80,
+    "image": "https://i.ibb.co/MCqcsg1/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mountain Lodge",
+    "location": "Scenic Mountains",
+    "description": "Escape the hustle and bustle of city life and immerse yourself in the serene beauty of the scenic mountains at our rustic mountain lodge. Nestled amidst towering trees and majestic peaks, our cozy cabins offer a tranquil retreat from the everyday chaos. Curl up by the fireplace with a good book, embark on exhilarating outdoor adventures, or simply soak in the breathtaking mountain views. With comfortable accommodations and hearty mountain fare, our lodge is the perfect getaway for nature lovers and outdoor enthusiasts alike.",
+    "price_range": "100",
+    "amenities": [
+      "Mountain Views",
+      "Fireplace",
+      "Outdoor Activities",
+      "Restaurant"
+    ],
+    "rating": 4.3,
+    "reviews": 105,
+    "image": "https://i.ibb.co/NtV1XYY/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mountain Lodge",
+    "location": "Scenic Mountains",
+    "description": "Escape the hustle and bustle of city life and immerse yourself in the serene beauty of the scenic mountains at our rustic mountain lodge. Nestled amidst towering trees and majestic peaks, our cozy cabins offer a tranquil retreat from the everyday chaos. Curl up by the fireplace with a good book, embark on exhilarating outdoor adventures, or simply soak in the breathtaking mountain views. With comfortable accommodations and hearty mountain fare, our lodge is the perfect getaway for nature lovers and outdoor enthusiasts alike.",
+    "price_range": "500",
+    "amenities": [
+      "Mountain Views",
+      "Fireplace",
+      "Outdoor Activities",
+      "Restaurant"
+    ],
+    "rating": 4.3,
+    "reviews": 105,
+    "image": "https://i.ibb.co/KF34LPH/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Mountain Lodge",
+    "location": "Scenic Mountains",
+    "description": "Escape the hustle and bustle of city life and immerse yourself in the serene beauty of the scenic mountains at our rustic mountain lodge. Nestled amidst towering trees and majestic peaks, our cozy cabins offer a tranquil retreat from the everyday chaos. Curl up by the fireplace with a good book, embark on exhilarating outdoor adventures, or simply soak in the breathtaking mountain views. With comfortable accommodations and hearty mountain fare, our lodge is the perfect getaway for nature lovers and outdoor enthusiasts alike.",
+    "price_range": "300",
+    "amenities": [
+      "Mountain Views",
+      "Fireplace",
+      "Outdoor Activities",
+      "Restaurant"
+    ],
+    "rating": 4.3,
+    "reviews": 105,
+    "image": "https://i.ibb.co/xz94KYY/6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Mountain Lodge",
+    "location": "Scenic Mountains",
+    "description": "Escape the hustle and bustle of city life and immerse yourself in the serene beauty of the scenic mountains at our rustic mountain lodge. Nestled amidst towering trees and majestic peaks, our cozy cabins offer a tranquil retreat from the everyday chaos. Curl up by the fireplace with a good book, embark on exhilarating outdoor adventures, or simply soak in the breathtaking mountain views. With comfortable accommodations and hearty mountain fare, our lodge is the perfect getaway for nature lovers and outdoor enthusiasts alike.",
+    "price_range": "350",
+    "amenities": [
+      "Mountain Views",
+      "Fireplace",
+      "Outdoor Activities",
+      "Restaurant"
+    ],
+    "rating": 4.3,
+    "reviews": 105,
+    "image": "https://i.ibb.co/tJF1TKY/9.webp"
+  },
+  {
+    "id": 8,
+    "name": "Mountain Lodge",
+    "location": "Scenic Mountains",
+    "description": "Escape the hustle and bustle of city life and immerse yourself in the serene beauty of the scenic mountains at our rustic mountain lodge. Nestled amidst towering trees and majestic peaks, our cozy cabins offer a tranquil retreat from the everyday chaos. Curl up by the fireplace with a good book, embark on exhilarating outdoor adventures, or simply soak in the breathtaking mountain views. With comfortable accommodations and hearty mountain fare, our lodge is the perfect getaway for nature lovers and outdoor enthusiasts alike.",
+    "price_range": "550",
+    "amenities": [
+      "Mountain Views",
+      "Fireplace",
+      "Outdoor Activities",
+      "Restaurant"
+    ],
+    "rating": 4.3,
+    "reviews": 105,
+    "image": "https://i.ibb.co/pvbyHd4/8.jpg"
+  }
+]
