@@ -22,7 +22,7 @@ const Navbar = () => {
             <Link href="/hotels" className="text-white hover:text-gray-300">Hotels</Link>
           </li>
           <li>
-            <Link href="/booking" className="text-white hover:text-gray-300">Booking <sup>{booking?.length}</sup></Link>
+            <Link href="/booking" className="text-white hover:text-gray-300">Booking <sup className="text-green-500 text-lg font-bold">{booking?.length}</sup></Link>
           </li>
         </ul>
 

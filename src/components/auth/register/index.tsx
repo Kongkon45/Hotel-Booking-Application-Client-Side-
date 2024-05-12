@@ -1,4 +1,3 @@
-
 "use client"
 import React, { useState } from 'react'
 import Link from "next/link";
@@ -6,14 +5,58 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import { tree } from 'next/dist/build/templates/app-page';
+import auth from '@/firebase/firebase.config';
+import {createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 
 const RegisterPage = () => {
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [registerError, setRegisterError] = useState("");
+
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  const onSubmit = (data: any) => {
+
+  const onSubmit = async (data: any) => {
+    const {name, email, password, checkbox} = data;
     console.log(data);
-    reset();
+    
+
+    try {
+      setRegisterError("");
+      setSuccess("");
+      if (password.length < 6) {
+        setRegisterError("Password must be 6 characters long");
+        return;
+      }
+
+      if (!/[A-Z]/.test(password)) {
+        setRegisterError("Password must be one uppercase character");
+        return;
+      }
+
+      if (!checkbox) {
+        setRegisterError("Please accept our terms and conditions");
+        return;
+      }
+
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      setSuccess("User is Createed")
+      console.log(user)
+
+      await updateProfile(user, {
+        displayName: name,
+        photoURL: "https://example.com/jane-q-user/profile.jpg"
+      });
+      setSuccess("User profile is updated")
+
+      await sendEmailVerification(user);
+
+      setSuccess("User registered successfully. Please check your email to verify your account.");
+      reset();
+    } catch (error:any) {
+      console.error(error.message);
+    }
+
   }
   return (
     <div className='mb-8'>
@@ -54,6 +97,8 @@ const RegisterPage = () => {
         <div className="flex justify-center items-center mt-4">
           <input className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700" type="submit" value="Register" />
         </div>
+        {success && <p className="text-green-500 text-center">{success}</p>}
+        {registerError && <p className="text-red-400 text-center">{registerError}</p>}
         <p className='mt-4'>Already have an account.? <Link href='/login' className="underline text-purple-700"> Login </Link></p>
       </form>
     </div>

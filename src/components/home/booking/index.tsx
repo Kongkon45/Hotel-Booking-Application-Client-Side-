@@ -41,7 +41,7 @@ const BookingPage = () => {
         <div className='w-1/4 h-fit border-2 rounded-lg shadow-lg p-4'>
                 <h3 className='text-xl font-bold my-4 text-center'>BOOKING SUMMARY</h3>
                 <h5 className='text-md font-bold flex justify-between items-center'>Subtotal <span>${totalPrice}</span></h5>
-                <h5 className='text-md font-bold flex justify-between items-center'>Delivery <span>Free</span></h5>
+                <h5 className='text-md font-bold flex justify-between items-center'>Services charge <span>Free</span></h5>
                 <h5 className='text-md font-bold flex justify-between items-center'>Tax <span>Free</span></h5>
                 <hr className='border my-2' />
                 <h5 className='text-md font-bold flex justify-between items-center'>Total <span>${totalPrice}</span></h5>
@@ -49,7 +49,7 @@ const BookingPage = () => {
                     <input className='my-4 border-2 rounded-l-lg py-1 px-4 w-full focus:outline-none' type="text" placeholder='Enter coupon' />
                     <button className='bg-[#fd3d57] text-white py-1 px-4 rounded-r-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition-all duration-300 ease-in-out ' type="submit">Apply</button>
                 </div>
-                <button className='w-full my-6 bg-[#fd3d57] text-white py-2 px-4 rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition-all duration-200 ease-in-out ' type="submit"><Link href='/cart/checkout'>PROCESS TO CHECKOUT</Link></button>
+                <button className='w-full my-6 bg-[#fd3d57] text-white py-2 px-4 rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition-all duration-200 ease-in-out ' type="submit"><Link href='/booking/checkout'>PROCESS TO CHECKOUT</Link></button>
             </div>
         </div>
     );
