@@ -8,7 +8,16 @@
     "amenities": ["Free Wi-Fi", "Swimming Pool", "Spa", "Gym"],
     "rating": 4.5,
     "reviews": 120,
-    "image": "https://i.ibb.co/52pyhfB/1.jpg"
+    "thumbnail": "https://i.ibb.co/52pyhfB/1.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 20 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 2,
@@ -19,7 +28,16 @@
     "amenities": ["Beach Access", "Poolside Bar", "Water Sports", "Restaurant"],
     "rating": 4.2,
     "reviews": 95,
-    "image": "https://i.ibb.co/c3vTCCk/2.jpg"
+    "thumbnail": "https://i.ibb.co/KF34LPH/5.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 10 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 3,
@@ -30,7 +48,16 @@
     "amenities": ["Free Breakfast", "Parking", "Pet-Friendly", "Garden"],
     "rating": 4.0,
     "reviews": 80,
-    "image": "https://i.ibb.co/MCqcsg1/3.jpg"
+    "thumbnail": "https://i.ibb.co/tJF1TKY/9.webp",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 30 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 4,
@@ -46,7 +73,16 @@
     ],
     "rating": 4.3,
     "reviews": 105,
-    "image": "https://i.ibb.co/NtV1XYY/4.jpg"
+    "thumbnail": "https://i.ibb.co/MCqcsg1/3.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 22 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 5,
@@ -62,7 +98,16 @@
     ],
     "rating": 4.3,
     "reviews": 105,
-    "image": "https://i.ibb.co/KF34LPH/5.jpg"
+    "thumbnail": "https://i.ibb.co/fpJMqQK/7.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 26 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 6,
@@ -78,7 +123,16 @@
     ],
     "rating": 4.3,
     "reviews": 105,
-    "image": "https://i.ibb.co/xz94KYY/6.jpg"
+    "thumbnail": "https://i.ibb.co/pvbyHd4/8.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 27 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 7,
@@ -94,7 +148,16 @@
     ],
     "rating": 4.3,
     "reviews": 105,
-    "image": "https://i.ibb.co/tJF1TKY/9.webp"
+    "thumbnail": "https://i.ibb.co/MCqcsg1/3.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 21 m²",
+    "bathroom" : "Shower bath"
   },
   {
     "id": 8,
@@ -110,6 +173,15 @@
     ],
     "rating": 4.3,
     "reviews": 105,
-    "image": "https://i.ibb.co/pvbyHd4/8.jpg"
+    "thumbnail": "https://i.ibb.co/xz94KYY/6.jpg",
+    "images": [
+    "https://i.ibb.co/c3vTCCk/2.jpg",
+    "https://i.ibb.co/MCqcsg1/3.jpg",
+    "https://i.ibb.co/NtV1XYY/4.jpg",
+    "https://i.ibb.co/KF34LPH/5.jpg",
+    "https://i.ibb.co/52pyhfB/1.jpg"
+    ],
+    "size" : "Approximately 29 m²",
+    "bathroom" : "Shower bath"
   }
 ]

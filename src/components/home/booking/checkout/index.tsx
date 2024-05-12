@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 import React, {useState} from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FaAngleDoubleRight } from "react-icons/fa";
@@ -9,7 +10,7 @@ interface IFormInput {
   firstName: string;
   lastName: string;
   email: string;
-  phoneNumber: number;
+  phoneNumber: string;
   city: string;
   address: string;
   zipCode: number;
@@ -85,11 +86,15 @@ const districts = [
 ];
 
 const CheckoutPage = () => {
+  const [formData, setFormData] = useState<IFormInput | null>(null);
+  const router = useRouter();
+
   const bookingRoom = useSelector((state: any) => state.hotels.hotels);
   const totalPrice = bookingRoom?.reduce(
     (total: any, room: any) => total + room.quantity * room.price_range,
     0
   );
+
 
   const {
     register,
@@ -97,10 +102,20 @@ const CheckoutPage = () => {
     reset,
     formState: { errors },
   } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
+
+
+  const onSubmit: SubmitHandler<IFormInput> = (data:any) => {
+    const existingBookingString:any = localStorage.getItem("formData");
+    
+    const existingBooking = existingBookingString ? JSON.parse(existingBookingString) : [];
+    
+    const mergedData = [...existingBooking, data];
+    
+    localStorage.setItem("formData", JSON.stringify(mergedData));
+    router.push("/dashboard")
     reset();
-  };
+};
+
 
   const [subTotal, setSubTotal] = useState(totalPrice)
   return (
@@ -266,7 +281,7 @@ const CheckoutPage = () => {
                         >
                           <img
                             className="w-12 h-12"
-                            src={`${room.image}`}
+                            src={`${room.thumbnail}`}
                             alt={`${room.name}`}
                           />
                           <h5>{room.name}</h5>

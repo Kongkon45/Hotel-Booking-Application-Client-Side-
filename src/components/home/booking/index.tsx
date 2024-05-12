@@ -24,7 +24,7 @@ const BookingPage = () => {
                     ) : (
                         bookingRooms?.map((room:any)=>{
                             return <li key={room.id} className="flex justify-between items-center gap-6 border-2 rounded-lg p-2 my-6">
-                                <img className="w-16 h-12" src={room.image} alt={room.name}/>
+                                <img className="w-16 h-12" src={room.thumbnail} alt={room.name}/>
                                 <h2 className="text-xl font-bold">{room.name}</h2>
                                 <div className="flex justify-center items-center gap-1">
                             <span><FaMapMarkerAlt/></span>

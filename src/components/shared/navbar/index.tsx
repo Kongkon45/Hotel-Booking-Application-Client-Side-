@@ -24,6 +24,9 @@ const Navbar = () => {
           <li>
             <Link href="/booking" className="text-white hover:text-gray-300">Booking <sup className="text-green-500 text-lg font-bold">{booking?.length}</sup></Link>
           </li>
+          <li className="ml-6">
+            <Link href="/dashboard" className="text-white hover:text-gray-300">Dashboard</Link>
+          </li>
         </ul>
 
         {/* Right Login and Registration Buttons */}
@@ -37,3 +40,5 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+
