@@ -1,7 +1,10 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const booking = useSelector((state:any)=>state?.hotels.hotels)
   return (
     <nav className="bg-gray-800 py-3 px-10 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
@@ -19,7 +22,7 @@ const Navbar = () => {
             <Link href="/hotels" className="text-white hover:text-gray-300">Hotels</Link>
           </li>
           <li>
-            <Link href="/contact" className="text-white hover:text-gray-300">Booking</Link>
+            <Link href="/booking" className="text-white hover:text-gray-300">Booking <sup>{booking?.length}</sup></Link>
           </li>
         </ul>
 

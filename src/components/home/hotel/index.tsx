@@ -1,11 +1,15 @@
+"use client"
 import React from 'react';
 import bookingRoom from "../../../bookingRoom.json";
 import Image from 'next/image';
 import Link from 'next/link'
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { addBooking } from '@/redux/features/hotelSlice';
 
-const BookingRoom = () => {
+const HotelPage = () => {
     // console.log(bookingRoom)
+    const dispatch = useDispatch();
     return (
         <div className='px-12 my-10'>
             <h2 className="text-center my-3 text-2xl font-bold">All Room</h2>
@@ -21,7 +25,7 @@ const BookingRoom = () => {
                             </div>
                             <div className="flex justify-between items-center mx-6 mt-2">
                                     <button className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-2 transition-all ease-in-out delay-500 duration-700"><Link href={`/hotels/${room.id}`}>View Room</Link></button>
-                                    <button className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-2 transition-all ease-in-out delay-500 duration-700">Booking</button>
+                                    <button onClick={()=>dispatch(addBooking(room))} className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-2 transition-all ease-in-out delay-500 duration-700">Booking</button>
                                 </div>
                         </div>
                     })
@@ -31,4 +35,4 @@ const BookingRoom = () => {
     );
 };
 
-export default BookingRoom;
+export default HotelPage;
