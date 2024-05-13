@@ -10,7 +10,9 @@ const HotelDetails = ({ params }: any) => {
   const dispatch = useDispatch();
   // console.log(params.id)
   // console.log(bookingRoom)
-  const filterHotel = bookingRoom?.find((room: any) => room.id == params.id);
+  const filterHotel: any = bookingRoom?.find(
+    (room: any) => room.id == params.id
+  );
   // console.log(filterHotel)
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -26,8 +28,8 @@ const HotelDetails = ({ params }: any) => {
   };
 
   return (
-    <div className="flex gap-10 py-10 px-12 items-center ">
-      <div className="w-1/2">
+    <div className="lg:flex w-full gap-10 py-10 px-12 items-center ">
+      <div className="lg:w-1/2 w-full mx-auto">
         <div className="overflow-hidden">
           <Image
             className="w-full h-80 mx-auto cursor-pointer hover:scale-125 duration-300 ease-in-out"
@@ -37,13 +39,14 @@ const HotelDetails = ({ params }: any) => {
             width={200}
           />
         </div>
-        <div className="flex gap-3 my-2">
+        <div className="flex gap-2 my-2 overflow-hidden">
           {filterHotel?.images.map((src: any, index: any) => (
             <img
+              className="lg:w-[100px] md:w-[75px] lg:h-[100px] md:h-[75px]"
               src={src}
               onClick={() => openImageViewer(index)}
-              width="100"
-              height="100"
+              width="50"
+              height="50"
               key={index}
               style={{ margin: "2px" }}
               alt="image"
@@ -52,7 +55,7 @@ const HotelDetails = ({ params }: any) => {
 
           {isViewerOpen && (
             <ImageViewer
-              src={filterHotel?.images}
+              src={filterHotel?.images || []}
               currentIndex={currentImage}
               disableScroll={false}
               closeOnClickOutside={true}
@@ -61,37 +64,53 @@ const HotelDetails = ({ params }: any) => {
           )}
         </div>
       </div>
-      <div className="w-1/2">
-        <h2 className="text-md">
-          <span className="text-xl font-bold ">Name :</span>{" "}
+      <div className="lg:w-1/2 w-full mx-auto">
+        <h2 className="lg:text-md md:text-sm text-xs">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Name :
+          </span>{" "}
           {filterHotel?.name}
         </h2>
-        <p className="text-md my-1">
-          <span className="text-xl font-bold ">Location :</span>{" "}
+        <p className="lg:text-md md:text-sm text-xs my-1">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Location :
+          </span>{" "}
           {filterHotel?.location}
         </p>
-        <p className="text-md my-1">
-          <span className="text-xl font-bold ">Size : </span>
+        <p className="lg:text-md md:text-sm text-xs my-1">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Size :{" "}
+          </span>
           {filterHotel?.size}
         </p>
-        <p className="text-md my-1">
-          <span className="text-xl font-bold ">Bathroom : </span>
+        <p className="lg:text-md md:text-sm text-xs my-1">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Bathroom :{" "}
+          </span>
           {filterHotel?.bathroom}
         </p>
-        <p className="text-md my-1">
-          <span className="text-xl font-bold ">Price Range :</span> $
-          {filterHotel?.price_range}
+        <p className="lg:text-md md:text-sm text-xs my-1">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Price Range :
+          </span>{" "}
+          ${filterHotel?.price_range}
         </p>
-        <p className="text-md my-1">
-          <span className="text-xl font-bold ">Rating :</span>{" "}
+        <p className="lg:text-md md:text-sm text-xs my-1">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Rating :
+          </span>{" "}
           {filterHotel?.rating}
         </p>
-        <p className="text-md my-1">
-          <span className="text-xl font-bold ">Reviews :</span>{" "}
+        <p className="lg:text-md md:text-sm text-xs my-1">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Reviews :
+          </span>{" "}
           {filterHotel?.reviews}
         </p>
-        <p className="text-sm text-justify">
-          <span className="text-xl font-bold ">Description :</span>{" "}
+        <p className="lg:text-sm md:text-sm text-xs text-justify">
+          <span className="lg:text-xl md:text-md text-sm font-bold ">
+            Description :
+          </span>{" "}
           {filterHotel?.description}
         </p>
         <button

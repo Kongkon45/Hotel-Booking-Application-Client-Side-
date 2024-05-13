@@ -15,7 +15,7 @@ interface IFormInput {
 }
 
 const DashboardPage = () => {
-  const [formData, setFormData] = useState<IFormInput | null>(null);
+  const [formData, setFormData]:any = useState<IFormInput | null>(null);
 
   useEffect(() => {
     const storedFormData = localStorage.getItem("formData");
@@ -25,7 +25,7 @@ const DashboardPage = () => {
   }, []);
 
   const handleDelete = (index: number) => {
-    const updatedFormData = [...formData];
+    const updatedFormData:any = [...formData];
     updatedFormData.splice(index, 1); // Remove the item at the specified index
     localStorage.setItem("formData", JSON.stringify(updatedFormData));
     setFormData(updatedFormData);

@@ -3,15 +3,17 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
-import { FaAngleDoubleRight } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "@/firebase/firebase.config";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [success, setSuccess] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [loginUser, setLoginUser]:any = useState(null);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -22,14 +24,18 @@ const LoginPage = () => {
   const onSubmit = async (data: any) => {
     const { email, password } = data;
     console.log(data);
-    reset();
 
     try {
+      setLoginError("");
+      setSuccess("");
       const result = await signInWithEmailAndPassword(auth, email, password);
-      const user = result.user;
+      const user:any = result.user;
       console.log(user);
+      setLoginUser(user);
       if (result.user.emailVerified) {
         setSuccess("User Login successfully");
+        router.push("/");
+        reset();
       } else {
         alert("Please verify your email address");
       }
@@ -40,26 +46,25 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="mb-10">
-      <div className="flex justify-end  items-center mt-6 px-12">
-        <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">
-          <Link href={`/`}>Back</Link>
-          <FaAngleDoubleRight />
-        </button>
-      </div>
-      <h2 className="text-center text-2xl font-bold mb-4">User Login Form</h2>
+    <div className="mb-10 px-10">
+      <h2 className="text-center lg:text-2xl md:text-xl text-md  font-bold my-4">
+        User Login Form
+      </h2>
       <form
-        className="lg:w-1/3 w-2/3 mx-auto border rounded-lg p-10 shadow-lg "
+        className="lg:w-1/3 md:w-2/3 w-full mx-auto border rounded-lg p-10 shadow-lg "
         onSubmit={handleSubmit(onSubmit)}
       >
         <div>
-          <label className="text-md font-bold" htmlFor="email">
+          <label
+            className="lg:text-md md:text-sm text-xs font-bold"
+            htmlFor="email"
+          >
             Email : <span className="text-md text-[#fd3d57]">*</span>
           </label>{" "}
           <br />
           <input
             type="email"
-            className="border-2 py-1 px-2 rounded-md w-full my-2"
+            className="border-2 lg:py-1 py-0.5 px-2 rounded-md w-full my-2"
             placeholder="Enter your Email..."
             {...register("email", { required: true })}
           />
@@ -71,13 +76,16 @@ const LoginPage = () => {
         </div>
 
         <div className="relative">
-          <label className="text-md font-bold" htmlFor="lastName">
+          <label
+            className="lg:text-md md:text-sm text-xs font-bold"
+            htmlFor="lastName"
+          >
             Password : <span className="text-md text-[#fd3d57]">*</span>
           </label>{" "}
           <br />
           <input
             type={showPassword ? "text" : "password"}
-            className="border-2 py-1 px-2 rounded-md w-full my-2"
+            className="border-2 lg:py-1 py-0.5 px-2 rounded-md w-full my-2"
             placeholder="Enter your Password..."
             {...register("password", { required: true })}
           />
@@ -96,20 +104,43 @@ const LoginPage = () => {
 
         <div className="flex justify-center items-center mt-4">
           <input
-            className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700"
+            className="text-sm font-semibold cursor-pointer hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700"
             type="submit"
             value="Login"
           />
         </div>
-        {loginError && <p className="text-red-400 text-center">{loginError}</p>}
-        {success && <h1 className="text-green-500 text-center">{success}</h1>}
-        <p className="mt-4">
+        {loginError && (
+          <p className="text-red-400 text-center lg:text-md md:text-sm text-xs">
+            {loginError}
+          </p>
+        )}
+        {success && (
+          <h1 className="text-green-500 text-center lg:text-md md:text-sm text-xs">
+            {success}
+          </h1>
+        )}
+        <p className="mt-4 lg:text-md md:text-sm text-xs">
           Don&apos;t have an account.?{" "}
           <Link href="/register" className="underline text-purple-700">
             Register
           </Link>
         </p>
       </form>
+      {loginUser && (
+        <div className="border-2 p-4 rounded-lg lg:w-1/3 md:w-2/3 w-full px-10 mx-auto my-6">
+          <img
+            className="w-20 h-20 mx-auto rounded-full"
+            src={loginUser.photoURL}
+            alt="photo"
+          />
+          <h1 className="text-center lg:text-xl md:text-md text-sm font-bold">
+            {loginUser.displayName}
+          </h1>
+          <p className="text-center lg:text-sm text-xs font-bold">
+            {loginUser.email}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
