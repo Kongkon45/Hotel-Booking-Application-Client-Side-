@@ -122,17 +122,17 @@ const CheckoutPage = () => {
     <div className="px-12 my-10">
       <div className="flex justify-end mr-10 mt-4">
         <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">
-          <Link href={`/cart`}>Back</Link>
+          <Link href={`/booking`}>Back</Link>
           <FaAngleDoubleRight />
         </button>
       </div>
 
       <div className="w-full mx-auto">
       <form
-            className="flex justify-center gap-20"
+            className="lg:flex w-full justify-center gap-20"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="w-3/6 my-6 border-2 p-10 rounded-lg shadow-lg">
+            <div className="lg:w-3/6 w-full my-6 border-2 p-10 rounded-lg shadow-lg">
               <div className="flex gap-10 items-center">
                 <div className="w-1/2">
                   <label className="text-md font-bold" htmlFor="firstName">
@@ -147,7 +147,7 @@ const CheckoutPage = () => {
                     {...register("firstName", { required: true })}
                   />
                   {errors.firstName && (
-                    <span className="text-[#fd3d57]">
+                    <span className="text-[#fd3d57] text-sm">
                       This field is required
                     </span>
                   )}
@@ -165,7 +165,7 @@ const CheckoutPage = () => {
                     {...register("lastName", { required: true })}
                   />
                   {errors.lastName && (
-                    <span className="text-[#fd3d57]">
+                    <span className="text-[#fd3d57] text-sm">
                       This field is required
                     </span>
                   )}
@@ -184,7 +184,7 @@ const CheckoutPage = () => {
                   {...register("email", { required: true })}
                 />
                 {errors.email && (
-                  <span className="text-[#fd3d57]">This field is required</span>
+                  <span className="text-[#fd3d57] text-sm">This field is required</span>
                 )}
               </div>
               <div className="my-4">
@@ -200,7 +200,7 @@ const CheckoutPage = () => {
                   {...register("phoneNumber", { required: true })}
                 />
                 {errors.phoneNumber && (
-                  <span className="text-[#fd3d57]">This field is required</span>
+                  <span className="text-[#fd3d57] text-sm">This field is required</span>
                 )}
               </div>
               <div className="my-4">
@@ -216,7 +216,7 @@ const CheckoutPage = () => {
                   {...register("address", { required: true })}
                 />
                 {errors.address && (
-                  <span className="text-[#fd3d57]">This field is required</span>
+                  <span className="text-[#fd3d57] text-sm">This field is required</span>
                 )}
               </div>
               <div className="flex gap-10 my-4">
@@ -238,7 +238,7 @@ const CheckoutPage = () => {
                     ))}
                   </select>
                   {errors.city && (
-                    <span className="text-[#fd3d57]">
+                    <span className="text-[#fd3d57] text-sm">
                       This field is required
                     </span>
                   )}
@@ -255,7 +255,7 @@ const CheckoutPage = () => {
                     {...register("zipCode", { required: true })}
                   />
                   {errors.zipCode && (
-                    <span className="text-[#fd3d57]">
+                    <span className="text-[#fd3d57] text-sm">
                       This field is required
                     </span>
                   )}
@@ -263,7 +263,7 @@ const CheckoutPage = () => {
               </div>
             </div>
 
-            <div className="w-2/6">
+            <div className="lg:w-2/6 w-full">
               <div className="mt-6 border-2 rounded-lg p-4">
                 <h2 className="text-center text-2xl font-bold my-3">Booking</h2>
                 <hr className="border mb-4" />
@@ -313,7 +313,7 @@ const CheckoutPage = () => {
                     <input className="text-right"
                         type="number"
                         value={subTotal}
-                        onChange={(e:any)=>setSubTotal(e.target.value)}
+                        onChange={(e: any)=>setSubTotal(e.target.value)}
                         {...register("subTotal", { required: true })}
                     />
                   </div>
@@ -323,12 +323,18 @@ const CheckoutPage = () => {
                     <input
                       className="w-5 h-5"
                       type="checkbox"
-                      {...register("checkbox")}
+                      {...register("checkbox", {required : true})}
                     />
                     <label className="text-sm" htmlFor="checkbox">
                       Agree to our Terms & Conditons
                     </label>
                   </div>
+                  {errors?.checkbox && (
+                    <span className="text-[#fd3d57] text-sm">
+                      This field is required
+                    </span>
+                  )}
+                  
                   <button
                     className="w-full mt-6 bg-[#fd3d57] text-white py-2 px-4 rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition-all duration-200 ease-in-out "
                     type="submit"

@@ -30,7 +30,7 @@ const HotelDetails = ({ params }: any) => {
       <div className="w-1/2">
         <div className="overflow-hidden">
           <Image
-            className="w-full h-80 mx-auto cursor-pointer hover:scale-110 duration-300 ease-in-out"
+            className="w-full h-80 mx-auto cursor-pointer hover:scale-125 duration-300 ease-in-out"
             src={filterHotel?.thumbnail}
             alt={filterHotel?.name}
             height={200}
@@ -62,36 +62,36 @@ const HotelDetails = ({ params }: any) => {
         </div>
       </div>
       <div className="w-1/2">
-        <h2 className="text-xl">
-          <span className="text-2xl font-bold ">Name :</span>{" "}
+        <h2 className="text-md">
+          <span className="text-xl font-bold ">Name :</span>{" "}
           {filterHotel?.name}
         </h2>
-        <p className="text-xl ">
-          <span className="text-2xl font-bold ">Location :</span>{" "}
+        <p className="text-md my-1">
+          <span className="text-xl font-bold ">Location :</span>{" "}
           {filterHotel?.location}
         </p>
-        <p className="text-xl">
-          <span className="text-2xl font-bold ">Size : </span>
+        <p className="text-md my-1">
+          <span className="text-xl font-bold ">Size : </span>
           {filterHotel?.size}
         </p>
-        <p className="text-xl">
-          <span className="text-2xl font-bold ">Bathroom : </span>
+        <p className="text-md my-1">
+          <span className="text-xl font-bold ">Bathroom : </span>
           {filterHotel?.bathroom}
         </p>
-        <p className="text-xl ">
-          <span className="text-2xl font-bold ">Price Range :</span> $
+        <p className="text-md my-1">
+          <span className="text-xl font-bold ">Price Range :</span> $
           {filterHotel?.price_range}
         </p>
-        <p className="text-xl ">
-          <span className="text-2xl font-bold ">Rating :</span>{" "}
+        <p className="text-md my-1">
+          <span className="text-xl font-bold ">Rating :</span>{" "}
           {filterHotel?.rating}
         </p>
-        <p className="text-xl ">
-          <span className="text-2xl font-bold ">Reviews :</span>{" "}
+        <p className="text-md my-1">
+          <span className="text-xl font-bold ">Reviews :</span>{" "}
           {filterHotel?.reviews}
         </p>
         <p className="text-sm text-justify">
-          <span className="text-2xl font-bold ">Description :</span>{" "}
+          <span className="text-xl font-bold ">Description :</span>{" "}
           {filterHotel?.description}
         </p>
         <button
