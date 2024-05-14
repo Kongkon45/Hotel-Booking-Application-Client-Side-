@@ -105,14 +105,16 @@ const CheckoutPage = () => {
 
   const onSubmit: SubmitHandler<IFormInput> = (data: any) => {
     data.subTotal = totalPrice;
-    const existingBookingString: any = localStorage.getItem("formData");
+    const existingBookingString: any = localStorage?.getItem("formData");
     const existingBooking = existingBookingString
       ? JSON.parse(existingBookingString)
       : [];
 
     const mergedData = [...existingBooking, data];
 
-    localStorage.setItem("formData", JSON.stringify(mergedData));
+    if (typeof window !== "undefined") {
+      localStorage?.setItem("formData", JSON.stringify(mergedData));
+    }
     dispatch(clearBookings());
     router.push("/dashboard");
     reset();
@@ -194,7 +196,7 @@ const CheckoutPage = () => {
               <input
                 className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
                 placeholder="Enter your phone number..."
-                type="number"
+                type="text"
                 {...register("phoneNumber", { required: true })}
               />
               {errors.phoneNumber && (
