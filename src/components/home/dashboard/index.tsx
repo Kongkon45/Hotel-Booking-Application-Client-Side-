@@ -28,7 +28,7 @@ const DashboardPage = () => {
 
   const handleDelete = (index: number) => {
     const updatedFormData: any = [...formData];
-    updatedFormData.splice(index, 1); // Remove the item at the specified index
+    updatedFormData.splice(index, 1);
     if (typeof window !== "undefined") {
       localStorage?.setItem("formData", JSON.stringify(updatedFormData));
     }
@@ -77,7 +77,13 @@ const DashboardPage = () => {
         </thead>
 
         <tbody>
-          {formData &&
+          {formData?.length == null || 0 ? (
+            <tr className="text-center">
+            <td className="text-2xl font-bold py-6" colSpan={10}>
+              Booking Data Not Found
+            </td>
+          </tr>
+          ) : (
             formData?.map((formData: any, index: any) => {
               return (
                 <tr key={index}>
@@ -118,7 +124,8 @@ const DashboardPage = () => {
                   </td>
                 </tr>
               );
-            })}
+            })
+          )}
         </tbody>
       </table>
     </div>
