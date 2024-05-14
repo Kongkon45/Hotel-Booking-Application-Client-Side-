@@ -28,7 +28,7 @@ const HotelDetails = ({ params }: any) => {
   };
 
   return (
-    <div className="lg:flex w-full gap-10 py-10 px-12 items-center ">
+    <div className="h-fit mb-10 lg:flex w-full gap-10 py-6 px-12 items-center ">
       <div className="lg:w-1/2 w-full mx-auto">
         <div className="overflow-hidden">
           <Image

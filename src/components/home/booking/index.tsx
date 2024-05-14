@@ -14,7 +14,7 @@ const BookingPage = () => {
     0
   );
   return (
-    <div className="lg:flex w-full justify-center gap-10 my-10 lg:px-20 md:px-40 px-24">
+    <div className="h-fit mb-20 lg:flex w-full justify-center gap-10 my-10 lg:px-20 md:px-40 px-24">
       <div className="lg:w-2/4 w-full mx-auto">
         <h2 className="w-full flex justify-around lg:text-xl text-md  font-semibold rounded-lg bg-[#e9e4e4] text-black py-1 ">
           <span>Rooms</span>
@@ -30,7 +30,7 @@ const BookingPage = () => {
               return (
                 <li
                   key={room.id}
-                  className="flex justify-between items-center lg:gap-6 md:gap-4 gap-2 border-2 rounded-lg ;lg:p-2 md:p-1 p-0.5 my-6"
+                  className="flex justify-between items-center lg:gap-6 md:gap-4 gap-2 border-2 rounded-lg ;lg:p-2 p-1 my-6"
                 >
                   <img
                     className="lg:w-16 md:w-12 w-10 lg:h-12 md:h-10 h-8"
@@ -86,7 +86,7 @@ const BookingPage = () => {
           </button>
         </div>
         <button
-          className="w-full my-6 bg-[#fd3d57] text-white lg:py-2 py-1 lg:px-4 px-2 rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition-all duration-200 ease-in-out "
+          className="w-full my-6 bg-[#fd3d57] text-white lg:py-2 py-1 lg:px-4 px-2 rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition duration-200 ease-in-out "
           type="submit"
         >
           <Link href="/booking/checkout" className="lg:text-md md:text-sm text-xs">PROCESS TO CHECKOUT</Link>

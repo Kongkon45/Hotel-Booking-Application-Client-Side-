@@ -120,7 +120,7 @@ const CheckoutPage = () => {
     reset();
   };
   return (
-    <div className="px-12 my-10">
+    <div className="px-12 my-10 mb-20">
       <div className="flex justify-end mr-10 mt-4">
         <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">
           <Link href={`/booking`}>Back</Link>
@@ -133,16 +133,16 @@ const CheckoutPage = () => {
           className="lg:flex w-full justify-center gap-20"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="lg:w-3/6 w-full my-6 border-2 p-10 rounded-lg shadow-lg">
+          <div className="lg:w-3/6 h-fit w-full my-6 border-2 p-10 rounded-lg shadow-lg">
             <div className="flex gap-10 items-center">
               <div className="w-1/2">
-                <label className="text-md font-bold" htmlFor="firstName">
+                <label className="lg:text-md text-sm  font-bold" htmlFor="firstName">
                   First Name : <span className="text-md text-[#fd3d57]">*</span>
                 </label>{" "}
                 <br />
                 <input
-                  className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
-                  placeholder="Enter your name..."
+                  className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2 "
+                  placeholder="Enter your First Name..."
                   type="text"
                   {...register("firstName", { required: true })}
                 />
@@ -153,12 +153,12 @@ const CheckoutPage = () => {
                 )}
               </div>
               <div className="w-1/2">
-                <label className="text-md font-bold" htmlFor="lastName">
+                <label className="lg:text-md text-sm font-bold" htmlFor="lastName">
                   Last Name : <span className="text-md text-[#fd3d57]">*</span>
                 </label>{" "}
                 <br />
                 <input
-                  className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
+                  className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2 "
                   placeholder="Enter your lastName..."
                   type="text"
                   {...register("lastName", { required: true })}
@@ -171,13 +171,13 @@ const CheckoutPage = () => {
               </div>
             </div>
             <div className="my-4">
-              <label className="text-md font-bold" htmlFor="email">
+              <label className="lg:text-md text-sm font-bold" htmlFor="email">
                 Email Address :{" "}
                 <span className="text-md text-[#fd3d57]">*</span>
               </label>{" "}
               <br />
               <input
-                className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
+                className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2 "
                 placeholder="Enter your email..."
                 type="email"
                 {...register("email", { required: true })}
@@ -189,12 +189,12 @@ const CheckoutPage = () => {
               )}
             </div>
             <div className="my-4">
-              <label className="text-md font-bold" htmlFor="phoneNumber">
+              <label className="lg:text-md text-sm font-bold" htmlFor="phoneNumber">
                 Phone Number : <span className="text-md text-[#fd3d57]">*</span>
               </label>{" "}
               <br />
               <input
-                className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
+                className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2 "
                 placeholder="Enter your phone number..."
                 type="text"
                 {...register("phoneNumber", { required: true })}
@@ -206,13 +206,13 @@ const CheckoutPage = () => {
               )}
             </div>
             <div className="my-4">
-              <label className="text-md font-bold" htmlFor="address">
+              <label className="lg:text-md text-sm font-bold" htmlFor="address">
                 Street Address :{" "}
                 <span className="text-md text-[#fd3d57]">*</span>
               </label>{" "}
               <br />
               <input
-                className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
+                className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2 "
                 placeholder="Enter your Address..."
                 type="text"
                 {...register("address", { required: true })}
@@ -225,12 +225,12 @@ const CheckoutPage = () => {
             </div>
             <div className="flex gap-10 my-4">
               <div className="w-1/2">
-                <label className="text-md font-bold" htmlFor="town/city">
+                <label className="lg:text-md text-sm font-bold" htmlFor="town/city">
                   Town/City : <span className="text-md text-[#fd3d57]">*</span>
                 </label>{" "}
                 <br />
                 <select
-                  className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2"
+                  className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2"
                   {...register("city", { required: true })}
                 >
                   <option value="">Select Town/City</option>
@@ -247,12 +247,12 @@ const CheckoutPage = () => {
                 )}
               </div>
               <div className="w-1/2">
-                <label className="text-md font-bold" htmlFor="zipCode">
+                <label className="lg:text-md text-sm font-bold" htmlFor="zipCode">
                   Zip Code : <span className="text-md text-[#fd3d57]">*</span>
                 </label>{" "}
                 <br />
                 <input
-                  className="w-full border-2 hover:border-[#fd3d57] rounded-md py-1 px-2 "
+                  className="w-full border-2 lg:text-md md:text-sm text-[10px] hover:border-[#fd3d57] rounded-md py-1 px-2 "
                   placeholder="Enter zip code..."
                   type="text"
                   {...register("zipCode", { required: true })}
@@ -298,7 +298,7 @@ const CheckoutPage = () => {
                   })
                 )}
               </ul>
-              <div className="my-6">
+              <div className="mt-6 mb-2">
                 <hr className="border my-2" />
                 <h5 className="text-md font-bold flex justify-between items-center">
                   Subtotal <span>${totalPrice}</span>
@@ -315,7 +315,7 @@ const CheckoutPage = () => {
                 <hr className="border my-2" />
                 <div className="flex items-center gap-2 mt-6">
                   <input
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                     type="checkbox"
                     {...register("checkbox", { required: true })}
                   />
@@ -330,7 +330,7 @@ const CheckoutPage = () => {
                 )}
 
                 <button
-                  className="w-full mt-6 bg-[#fd3d57] text-white py-2 px-4 rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition-all duration-200 ease-in-out "
+                  className="w-full mt-6 bg-[#fd3d57] text-white lg:py-2 py-1 lg:px-4 px-2 lg:text-md text-sm rounded-lg hover:border-2 hover:bg-white hover:text-[#fd3d57] hover:border-[#fd3d57] transition duration-200 ease-in-out "
                   type="submit"
                 >
                   PLACE BOOKING

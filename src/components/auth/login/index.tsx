@@ -46,7 +46,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="mb-10 px-10">
+    <div className="h-screen mb-10 px-10">
       <h2 className="text-center lg:text-2xl md:text-xl text-md  font-bold my-4">
         User Login Form
       </h2>

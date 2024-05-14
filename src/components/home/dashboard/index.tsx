@@ -36,7 +36,7 @@ const DashboardPage = () => {
   };
 
   return (
-    <div className="lg:px-12 md:px-6 px-1 my-10">
+    <div className="h-screen mb-10 lg:px-12 md:px-6 px-1 my-10">
       <h2 className="text-center my-4 lg:text-xl md:text-md text-sm font-bold">
         Saved Form Data
       </h2>
